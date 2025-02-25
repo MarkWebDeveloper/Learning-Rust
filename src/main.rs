@@ -2,23 +2,29 @@ mod print_name;
 mod mutable_variables;
 mod datatypes;
 mod type_conversion;
-mod if_condition;
 mod infinite_loop;
-mod match_pattern;
-mod arrays;
-mod slice;
+mod conditions {
+    pub mod match_pattern;
+    pub mod if_condition;
+}
+mod data_structures {
+    pub mod arrays;
+    pub mod slice;
+    pub mod tuples;
+}
 fn main() {
     print_name::print();
     mutable_variables::change_and_print_variables();
     datatypes::print_datatypes();
     type_conversion::convert_and_print();
-    if_condition::make_decision();
+    conditions::if_condition::make_decision();
     infinite_loop::run_loop_and_break();
-    match_pattern::match_working_age();
-    match_pattern::match_season();
-    match_pattern::match_option();
-    match_pattern::match_result();
-    match_pattern::match_if_let();
-    arrays::loop_through_array();
-    slice::make_a_slice();
+    conditions::match_pattern::match_working_age();
+    conditions::match_pattern::match_season();
+    conditions::match_pattern::match_option();
+    conditions::match_pattern::match_result();
+    conditions::match_pattern::match_if_let();
+    data_structures::arrays::loop_through_array();
+    data_structures::slice::make_a_slice();
+    data_structures::tuples::create_and_print_tuple();
 }
