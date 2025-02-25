@@ -13,4 +13,6 @@ fn main() {
     if_condition::make_decision();
     infinite_loop::run_loop_and_break();
     match_pattern::match_working_age();
+    match_pattern::match_season();
+    match_pattern::match_option();
 }
