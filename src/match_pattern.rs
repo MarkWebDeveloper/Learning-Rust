@@ -1,7 +1,5 @@
 // match is a type of switch in Rust
 
-use std::collections::btree_map::Values;
-
 pub fn match_working_age() {
     let age: i32 = 28;
     match age {
@@ -37,11 +35,34 @@ pub fn match_season() {
 // match with option
 
 pub fn match_option () {
-    let my_option: Option<&str> = Some("blonds");
+    let my_option: Option<&str> = None;
 
     match my_option {
         Some(value) => println!("My favorite girls are {}", value),
-        None => print!("I don't need girlfriends")
+        None => println!("I don't need girlfriends")
+    }
+
+    println!("--------------------------------------------------");
+}
+
+pub fn match_result() {
+    let my_result: Result<i32, &str> = Ok(100);
+
+    match my_result {
+        Ok(result) => println!("The server responded with the code {}", result),
+        Err(error) => println!("Error occurred during the request. The error code is: {}", error)
+    }
+
+    println!("--------------------------------------------------");
+}
+
+pub fn match_if_let() {
+    let my_option: Option<&str> = Some("beautiful day");
+
+    if let Some(value) = my_option {
+        println!("I like to go outside when it's a {}", value);
+    } else {
+        println!("I'm gonna stay at home");
     }
 
     println!("--------------------------------------------------");

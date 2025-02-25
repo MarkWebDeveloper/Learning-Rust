@@ -15,4 +15,6 @@ fn main() {
     match_pattern::match_working_age();
     match_pattern::match_season();
     match_pattern::match_option();
+    match_pattern::match_result();
+    match_pattern::match_if_let();
 }
