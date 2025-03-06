@@ -11,6 +11,7 @@ mod data_structures {
     pub mod arrays;
     pub mod slice;
     pub mod tuples;
+    pub mod structs;
 }
 fn main() {
     print_name::print();
@@ -27,4 +28,5 @@ fn main() {
     data_structures::arrays::loop_through_array();
     data_structures::slice::make_a_slice();
     data_structures::tuples::create_and_print_tuple();
+    data_structures::structs::print_a_struct();
 }
